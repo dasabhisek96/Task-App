@@ -23,7 +23,7 @@ function Signup() {
     
     
         try {
-          const response = await fetch(`$(process.env.SERVER_URL)/api/users/signup`, {
+          const response = await fetch(`https://task-app-8ivu.onrender.com/api/users/signup`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
