@@ -16,7 +16,7 @@ function Login() {
     setSuccess("");
   
     try {
-      const response = await fetch(`$(process.env.SERVER_URL)/api/users/login`, {
+      const response = await fetch(`https://task-app-8ivu.onrender.com/api/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,13 +52,13 @@ function Login() {
   // Handle Google Login
   const handleGoogleLogin = () => {
     // Open the Google authentication popup
-    window.open(`$(process.env.SERVER_URL)/auth/google/callback`, "_self");
+    window.open(`https://task-app-8ivu.onrender.com/auth/google/callback`, "_self");
   };
 
   // Handle successful Google login and retrieve token from the backend
   const handleGoogleSuccess = async () => {
     try {
-      const response = await fetch(`$(process.env.SERVER_URL)/auth/login/success`, {
+      const response = await fetch(`https://task-app-8ivu.onrender.com/auth/login/success`, {
         credentials: "include", // Important to include cookies for Google OAuth session
       });
 
