@@ -17,7 +17,7 @@ const TaskManager = () => {
       setLoading(true);
       try {
         const token = getToken();
-        const response = await fetch(`$(window.location.origin)/api/tasks`, {
+        const response = await fetch(`https://task-app-8ivu.onrender.com/api/tasks`, {
           headers: {
             'Authorization': `Bearer ${token}`, 
             'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ const TaskManager = () => {
     if (newTask.title && newTask.description) {
       try {
         const token = getToken();
-        const response = await fetch(`$(process.env.SERVER_URL)/api/tasks`, {
+        const response = await fetch(`https://task-app-8ivu.onrender.com/api/tasks`, {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`, 
