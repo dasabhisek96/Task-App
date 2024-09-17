@@ -52,13 +52,13 @@ function Login() {
   // Handle Google Login
   const handleGoogleLogin = () => {
     // Open the Google authentication popup
-    window.open(`https://task-app-8ivu.onrender.com/auth/google/callback`, "_self");
+    window.open(`http://localhost:8080/auth/google/callback`, "_self");
   };
 
   // Handle successful Google login and retrieve token from the backend
   const handleGoogleSuccess = async () => {
     try {
-      const response = await fetch(`https://task-app-8ivu.onrender.com/auth/login/success`, {
+      const response = await fetch(`http://localhost:8080/auth/login/success`, {
         credentials: "include", // Important to include cookies for Google OAuth session
       });
 
