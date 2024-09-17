@@ -13,7 +13,7 @@ function EditTaskModal() {
     const fetchTask = async () => {
       const token = localStorage.getItem('token');
       try {
-        const response = await fetch(`$(window.location.origin)/api/tasks/${id}`, {
+        const response = await fetch(`https://task-app-8ivu.onrender.com/api/tasks/${id}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -43,7 +43,7 @@ function EditTaskModal() {
   const handleSave = async () => {
     const token = localStorage.getItem('token');
     try {
-      const response = await fetch(`$(process.env.SERVER_URL)/api/tasks/${id}`, {
+      const response = await fetch(`https://task-app-8ivu.onrender.com/api/tasks/${id}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
