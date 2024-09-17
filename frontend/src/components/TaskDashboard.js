@@ -20,7 +20,7 @@ function TaskDashboard() {
       }
 
       try {
-        const response = await fetch(`$(process.env.SERVER_URL)/api/tasks`, {
+        const response = await fetch(`https://task-app-8ivu.onrender.com/api/tasks`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -73,7 +73,7 @@ function TaskDashboard() {
     }
 
     try {
-      const response = await fetch(`$(process.env.SERVER_URL)/api/tasks/${id}`, {
+      const response = await fetch(`https://task-app-8ivu.onrender.com/api/tasks/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
